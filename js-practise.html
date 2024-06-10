@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js practise</title>
+</head>
+<body>
+    <h1 onclick="changeColor()" id="header">hello world</h1>
+    <p id="para"></p>
+    <button id="btn" onclick="greeting()">click me</button>
+    <h2 id="h2"></h2>
+    <input type="text" id="input">
+    <button id="save-btn">save</button>
+    <ul id="list"></ul>
+    <script>
+    //    function changeColor(){
+    //     const data = document.getElementById("header") //either by using getElementById or querySelector
+    //     data.style.backgroundColor="red"
+    //    }
+      const listEl = document.getElementById("list")
+      const inpEl = document.getElementById("input")
+    //    let element = document.createElement("li")
+    //    element.textContent = "hello"
+    //    listEl.appendChild(element)
+    //    //content
+    //    const paragraph = document.getElementById("para")
+    //    paragraph.textContent="hello this is js"
+    let greetMsg = document.getElementById("h2")
+    function greeting(){
+        greetMsg.textContent="hello kaush..how are youu"
+    }
+    
+const saveBtn = document.getElementById("save-btn")
+saveBtn.addEventListener("dblclick",function(){
+    let li = document.createElement("li")
+    listEl.appendChild(li).textContent=inpEl.value
+})
+    </script>
+</body>
+</html>
